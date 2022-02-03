@@ -22,7 +22,6 @@ version = properties("pluginVersion")
 // Configure project's dependencies
 repositories {
     mavenCentral()
-
 }
 dependencies {
     implementation("org.apache.maven.scm:maven-scm-client:1.12.0")
