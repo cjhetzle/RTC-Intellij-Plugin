@@ -1,7 +1,8 @@
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
+
     <id>com.github.cjhetzle.rtcintellijplugin</id>
-    <name>RTC-Intellij-Plugin</name>
+    <name>RTC</name>
     <vendor>cjhetzle</vendor>
 
     <depends>com.intellij.modules.platform</depends>
@@ -15,4 +16,15 @@
         <listener class="com.github.cjhetzle.rtcintellijplugin.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
     </applicationListeners>
+    <actions>
+        <action id="com.github.cjhetzle.rtcintellijplugin.actions.TestAction"
+                class="com.github.cjhetzle.rtcintellijplugin.actions.TestAction" text="TestAction" description="lsadfjal;sdfkj">
+            <add-to-group group-id="FileMenu" anchor="after" relative-to-action="FileOpenGroup"/>
+        </action>
+        <action id="com.github.cjhetzle.rtcintellijplugin.JavaAction"
+                class="com.github.cjhetzle.rtcintellijplugin.JavaAction" text="JavaAction"
+                description="klasdfjkl;asefkl;j">
+            <add-to-group group-id="FileMenu" anchor="after" relative-to-action="FileOpenGroup"/>
+        </action>
+    </actions>
 </idea-plugin>
